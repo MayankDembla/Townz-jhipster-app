@@ -1,0 +1,36 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="cityLocations">
+            <h2><span jhiTranslate="myApp.townzCityLocations.detail.title">City Locations</span> {{ cityLocations.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="myApp.townzCityLocations.location">Location</span></dt>
+                <dd>
+                    <span>{{ cityLocations.location }}</span>
+                </dd>
+                <dt><span jhiTranslate="myApp.townzCityLocations.city">City</span></dt>
+                <dd>
+                    <div *ngIf="cityLocations.city">
+                        <a [routerLink]="['/city', cityLocations.city?.id, 'view']">{{ cityLocations.city?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/city-locations', cityLocations.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

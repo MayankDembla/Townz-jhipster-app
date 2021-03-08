@@ -1,0 +1,32 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="customerReferCode">
+            <h2><span jhiTranslate="myApp.townzCustomerReferCode.detail.title">Customer Refer Code</span> {{ customerReferCode.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="myApp.townzCustomerReferCode.customer">Customer</span></dt>
+                <dd>
+                    <div *ngIf="customerReferCode.customer">
+                        <a [routerLink]="['/customer', customerReferCode.customer?.id, 'view']">{{ customerReferCode.customer?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/customer-refer-code', customerReferCode.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

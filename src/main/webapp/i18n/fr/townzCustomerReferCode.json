@@ -1,0 +1,23 @@
+{
+  "myApp": {
+    "townzCustomerReferCode": {
+      "home": {
+        "title": "CustomerReferCodes",
+        "createLabel": "Créer un nouveau Customer Refer Code",
+        "createOrEditLabel": "Créer ou éditer un Customer Refer Code",
+        "notFound": "Aucun Customer Refer Code trouvé"
+      },
+      "created": "Un nouveau Customer Refer Code a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Customer Refer Code avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Customer Refer Code avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Customer Refer Code {{ id }} ?"
+      },
+      "detail": {
+        "title": "Customer Refer Code"
+      },
+      "customer": "Customer",
+      "customer": "Customer"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "myApp": {
+    "townzCusotmerNotification": {
+      "home": {
+        "title": "Cusotmer Notifications",
+        "createLabel": "Create a new Cusotmer Notification",
+        "createOrEditLabel": "Create or edit a Cusotmer Notification",
+        "notFound": "No Cusotmer Notifications found"
+      },
+      "created": "A new Cusotmer Notification is created with identifier {{ param }}",
+      "updated": "A Cusotmer Notification is updated with identifier {{ param }}",
+      "deleted": "A Cusotmer Notification is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cusotmer Notification {{ id }}?"
+      },
+      "detail": {
+        "title": "Cusotmer Notification"
+      },
+      "alert": "Alert",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "cusomer": "Cusomer"
+    }
+  }
+}
