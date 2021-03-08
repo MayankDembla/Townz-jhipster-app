@@ -1,0 +1,30 @@
+{
+  "name": "CityLocations",
+  "fields": [
+    {
+      "fieldName": "location",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "city",
+      "otherEntityRelationshipName": "citylocation",
+      "relationshipName": "city",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210308105250",
+  "entityTableName": "city_locations",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "Townz",
+  "applications": ["myApp"],
+  "microserviceName": "Townz"
+}

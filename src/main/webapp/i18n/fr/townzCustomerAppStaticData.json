@@ -1,0 +1,23 @@
+{
+  "myApp": {
+    "townzCustomerAppStaticData": {
+      "home": {
+        "title": "CustomerAppStaticData",
+        "createLabel": "Créer un nouveau Customer App Static Data",
+        "createOrEditLabel": "Créer ou éditer un Customer App Static Data",
+        "notFound": "Aucun Customer App Static Data trouvé"
+      },
+      "created": "Un nouveau Customer App Static Data a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Customer App Static Data avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Customer App Static Data avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Customer App Static Data {{ id }} ?"
+      },
+      "detail": {
+        "title": "Customer App Static Data"
+      },
+      "heading": "Heading",
+      "content": "Content"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "myApp": {
+    "townzCityLocations": {
+      "home": {
+        "title": "City Locations",
+        "createLabel": "Create a new City Locations",
+        "createOrEditLabel": "Create or edit a City Locations",
+        "notFound": "No City Locations found"
+      },
+      "created": "A new City Locations is created with identifier {{ param }}",
+      "updated": "A City Locations is updated with identifier {{ param }}",
+      "deleted": "A City Locations is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete City Locations {{ id }}?"
+      },
+      "detail": {
+        "title": "City Locations"
+      },
+      "location": "Location",
+      "city": "City"
+    }
+  }
+}

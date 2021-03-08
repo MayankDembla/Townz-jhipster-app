@@ -1,0 +1,23 @@
+{
+  "myApp": {
+    "townzCityLocations": {
+      "home": {
+        "title": "CityLocations",
+        "createLabel": "Créer un nouveau City Locations",
+        "createOrEditLabel": "Créer ou éditer un City Locations",
+        "notFound": "Aucun City Locations trouvé"
+      },
+      "created": "Un nouveau City Locations a été créé avec l'identifiant {{ param }}",
+      "updated": "Le City Locations avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le City Locations avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le City Locations {{ id }} ?"
+      },
+      "detail": {
+        "title": "City Locations"
+      },
+      "location": "Location",
+      "city": "City"
+    }
+  }
+}

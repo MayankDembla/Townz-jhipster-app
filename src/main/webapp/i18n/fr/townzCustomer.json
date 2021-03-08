@@ -1,0 +1,35 @@
+{
+  "myApp": {
+    "townzCustomer": {
+      "home": {
+        "title": "Customers",
+        "createLabel": "Créer un nouveau Customer",
+        "createOrEditLabel": "Créer ou éditer un Customer",
+        "notFound": "Aucun Customer trouvé"
+      },
+      "created": "Un nouveau Customer a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Customer avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Customer avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Customer {{ id }} ?"
+      },
+      "detail": {
+        "title": "Customer"
+      },
+      "name": "Name",
+      "token": "Token",
+      "phone": "Phone",
+      "sphone": "Sphone",
+      "email": "Email",
+      "profileimage": "Profileimage",
+      "active": "Active",
+      "isFirstBooking": "Is First Booking",
+      "timecreated": "Timecreated",
+      "referFromCustomerId": "Refer From Customer Id",
+      "wallet": "Wallet",
+      "address": "Address",
+      "referToCustomerId": "Refer To Customer Id",
+      "notification": "Notification"
+    }
+  }
+}

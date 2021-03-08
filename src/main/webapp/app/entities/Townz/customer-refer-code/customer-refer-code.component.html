@@ -1,0 +1,65 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="myApp.townzCustomerReferCode.home.title">Customer Refer Codes</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-customer-refer-code" [routerLink]="['/customer-refer-code/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="myApp.townzCustomerReferCode.home.createLabel">
+            Create a new Customer Refer Code
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="customerReferCodes?.length === 0">
+        <span jhiTranslate="myApp.townzCustomerReferCode.home.notFound">No customerReferCodes found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="customerReferCodes && customerReferCodes.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="myApp.townzCustomerReferCode.customer">Customer</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let customerReferCode of customerReferCodes ;trackBy: trackId">
+                    <td><a [routerLink]="['/customer-refer-code', customerReferCode.id, 'view']">{{ customerReferCode.id }}</a></td>
+                    <td>
+                        <div *ngIf="customerReferCode.customer">
+                            <a [routerLink]="['/customer', customerReferCode.customer?.id, 'view']" >{{ customerReferCode.customer?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/customer-refer-code', customerReferCode.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/customer-refer-code', customerReferCode.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(customerReferCode)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+{
+  "name": "Customer",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "token",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sphone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "profileimage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "active",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isFirstBooking",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "timecreated",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "customerReferCode",
+      "otherEntityRelationshipName": "customer",
+      "relationshipName": "referFromCustomerId",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "wallet",
+      "otherEntityRelationshipName": "customer",
+      "relationshipName": "wallet",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "customer",
+      "relationshipName": "address"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "customerReferCode",
+      "otherEntityRelationshipName": "customer",
+      "relationshipName": "referToCustomerId"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "cusotmerNotification",
+      "otherEntityRelationshipName": "cusomer",
+      "relationshipName": "notification"
+    }
+  ],
+  "changelogDate": "20210308104950",
+  "entityTableName": "customer",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "Townz",
+  "applications": ["myApp"],
+  "microserviceName": "Townz"
+}

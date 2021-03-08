@@ -1,0 +1,23 @@
+{
+  "myApp": {
+    "townzCusotmerAppBanner": {
+      "home": {
+        "title": "CusotmerAppBanners",
+        "createLabel": "Créer un nouveau Cusotmer App Banner",
+        "createOrEditLabel": "Créer ou éditer un Cusotmer App Banner",
+        "notFound": "Aucun Cusotmer App Banner trouvé"
+      },
+      "created": "Un nouveau Cusotmer App Banner a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Cusotmer App Banner avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Cusotmer App Banner avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Cusotmer App Banner {{ id }} ?"
+      },
+      "detail": {
+        "title": "Cusotmer App Banner"
+      },
+      "image": "Image",
+      "location": "Location"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "CusotmerNotification",
+  "fields": [
+    {
+      "fieldName": "alert",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "notification",
+      "relationshipName": "cusomer",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210308105650",
+  "entityTableName": "cusotmer_notification",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "Townz",
+  "applications": ["myApp"],
+  "microserviceName": "Townz"
+}

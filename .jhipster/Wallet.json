@@ -1,0 +1,38 @@
+{
+  "name": "Wallet",
+  "fields": [
+    {
+      "fieldName": "walletId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "balance",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "credit",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "wallet",
+      "relationshipName": "customer",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20210308105450",
+  "entityTableName": "wallet",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "Townz",
+  "applications": ["myApp"],
+  "microserviceName": "Townz"
+}
