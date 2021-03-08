@@ -1,0 +1,97 @@
+
+application {
+  config {
+    baseName myApp,
+    applicationType monolith,
+    packageName com.townz,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework angular
+  }
+  entities *
+}
+
+entity Customer {
+
+   id Long, 
+   name String,
+   token String, 
+   phone String, 
+   sphone String, 
+   email String,
+   profileimage String, 
+   //address Address,
+   //refferecode CustomerReferCode,
+   active Boolean, 
+   isFirstBooking Boolean, 
+   timecreated Instant 
+}
+
+entity Address {
+   
+   id Long, 
+   address String, 
+   //city City, 
+   location String, 
+   pincode Long 
+  
+}
+
+entity City {
+   id Long, 
+   name String
+}
+
+entity CityLocations{
+   id Long, 
+   //cityId City, 
+   location String
+}
+
+entity CustomerReferCode{
+    id Long, 
+    //referFromCustomerId Customer, // one
+    //referToCustomerId Customer,  // list 
+}
+
+entity Wallet { 
+    walletId Long, 
+    //cusotmerId Customer, 
+    balance Float, 
+    credit Long 
+}
+
+entity CustomerAppStaticData{
+    id Long, 
+    heading String,
+    content String, 
+}
+
+entity CusotmerNotification{ 
+ id Long, 
+ alert String, 
+ //customer Customer, 
+ createdAt Instant, 
+ updatedAt Instant, 
+}
+
+entity CusotmerAppBanner{
+   id Long, 
+   image String, 
+   location String
+}
+
+
+relationship OneToMany{
+     Customer{address} to Address
+    Customer{referToCustomerId} to CustomerReferCode{customer}
+   City{citylocation} to  CityLocations{city} 
+  Customer{notification} to CusotmerNotification{cusomer} 
+}
+
+relationship OneToOne{
+    City{address} to Address{city}
+    Customer{referFromCustomerId} to CustomerReferCode{customer}
+    Customer{wallet} to Wallet{Customer}
+}
+    
